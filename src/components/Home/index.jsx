@@ -1,6 +1,7 @@
 import React from 'react'
 import News from './News'
 import Brand from './Brand'
+import NewProduct from './New-product'
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             </div>
             <News/>
             <Brand/>
+            <NewProduct/>
         </>
         
     )
