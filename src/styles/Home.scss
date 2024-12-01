@@ -1,0 +1,36 @@
+#home {
+    background: url('/src/assets/png/1.png') no-repeat center/cover;
+    min-height: 100vh;
+    padding-top: 150px;
+
+    .home {
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 80px;
+            font-weight: 400;
+            line-height: 95.3px;
+            color: white;
+        }
+
+        p {
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 28.8px;
+            letter-spacing: 0.01em;
+            color: white;
+            margin: 30px 0;
+        }
+
+        button {
+            font-family: "Playfair Display", serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            background: #F57520;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5%;
+        }
+    }
+}
