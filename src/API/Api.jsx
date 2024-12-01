@@ -1,1 +1,1 @@
-export const API = "https://fakestoreapi.com/products"
+export const API = "https://api.elchocrud.pro/api/v1/d5922ccc839d8f9d147d07025542afab/bicycle-product"
