@@ -2,7 +2,8 @@
     padding: 30px 0;
     // position: fixed;
     width: 100%;
-    background: #000;
+    background: rgb(0, 0, 0);
+
     .header {
         display: flex;
         align-items: center;
@@ -11,6 +12,7 @@
         &--nav {
             display: flex;
             gap: 35px;
+
             a {
                 font-family: "Playfair Display", serif;
                 font-size: 12px;
@@ -21,10 +23,11 @@
             }
         }
 
-        &--icons{
+        &--icons {
             display: flex;
             gap: 25px;
-            a{
+
+            a {
                 font-size: 12px;
                 font-weight: 400;
                 line-height: 19.2px;
@@ -32,13 +35,143 @@
                 color: white;
             }
         }
-        &--menu{
-            a{
+
+        &--menu {
+            a {
                 font-size: 12px;
                 font-weight: 400;
                 line-height: 19.2px;
                 font-size: 25px;
                 color: white;
+            }
+        }
+
+        &--burger {
+            transition: .7s;
+            position: fixed;
+            width: 450px;
+            height: 100vh;
+            background: white;
+            top: 0;
+            right: 0;
+            padding: 80px 0 0 40px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            z-index: 99;
+
+            h2 {
+                color: #B3B3B3;
+                font-size: 40px;
+                cursor: pointer;
+                position: absolute;
+                top: 30px;
+                right: 70px;
+            }
+
+            h1 {
+                font-family: "Playfair Display", serif;
+                font-size: 40px;
+                font-weight: 400;
+                line-height: 49.2px;
+                letter-spacing: 0.05em;
+                margin-bottom: 35px;
+            }
+
+            a {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 28.8px;
+                letter-spacing: 0.01em;
+                color: black;
+                margin-bottom: 10px;
+                transition: .7s;
+
+                &:hover {
+                    color: #F57520;
+                }
+            }
+        }
+
+        &--bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.571);
+            backdrop-filter: blur(1px);
+        }
+
+        &--dropdown {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+            top: 88px;
+            left: 6%;
+            background: #101010;
+            border: 2px solid #4C4C4C;
+            padding: 30px;
+            border-radius: 10px;
+            width: 650px;
+            height: 430px;
+            overflow-y: scroll;
+
+            a {
+                position: fixed;
+                top: 63px;
+                left: 30%;
+                color: white;
+                font-size: 43px;
+            }
+
+            &__text {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+
+                &--content {
+                    h3 {
+                        font-family: "Playfair Display", serif;
+                        font-size: 20px;
+                        font-weight: 500;
+                        margin-bottom: 30px;
+                        color: white;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #F57520;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--search {
+            position: absolute;
+            right: 21%;
+            top: 88px;
+
+            &__content {
+                position: relative;
+                input {
+                    padding: 10px 30px;
+                    background: #101010;
+                    outline: none;
+                    color: #777777;
+                    border: 2px solid #4C4C4C;
+                    border-radius: 5px;
+                }
+                a{
+                    position: absolute;
+                    right: 22px;
+                    color: #777777;
+                    font-size: 23px;
+                    top: 8px;
+                }
             }
         }
     }
