@@ -2,6 +2,7 @@ import React from 'react'
 import News from './News'
 import Brand from './Brand'
 import NewProduct from './New-product'
+import Form from './Form'
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <News/>
             <Brand/>
             <NewProduct/>
+            <Form/>
         </>
         
     )
