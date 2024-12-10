@@ -3,6 +3,7 @@ import News from './News'
 import Brand from './Brand'
 import NewProduct from './New-product'
 import Form from './Form'
+import Catalog from './Сatalog'
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <Brand/>
             <NewProduct/>
             <Form/>
+            <Catalog/>
         </>
         
     )
