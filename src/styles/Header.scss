@@ -151,28 +151,29 @@
         }
 
         &--search {
-            position: absolute;
+            position: fixed;
             right: 21%;
             top: 88px;
+            transition: 0.7s;
 
-            &__content {
-                position: relative;
-                input {
-                    padding: 10px 30px;
-                    background: #101010;
-                    outline: none;
-                    color: #777777;
-                    border: 2px solid #4C4C4C;
-                    border-radius: 5px;
-                }
-                a{
-                    position: absolute;
-                    right: 22px;
-                    color: #777777;
-                    font-size: 23px;
-                    top: 8px;
-                }
+
+            input {
+                padding: 10px 30px;
+                background: #101010;
+                outline: none;
+                color: #777777;
+                border: 2px solid #4C4C4C;
+                border-radius: 5px;
             }
+
+            a {
+                position: absolute;
+                right: 22px;
+                color: #777777;
+                font-size: 23px;
+                top: 8px;
+            }
+
         }
     }
 }

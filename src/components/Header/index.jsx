@@ -43,7 +43,7 @@ const Header = () => {
                         <Link to={''} onClick={() => setSearchInput(true)}>
                             <IoSearch />
                         </Link>
-                        <Link to={''}><FaRegUser /></Link>
+                        <Link to={'/accaunt'}><FaRegUser /></Link>
                         <Link to={''}><FaRegHeart /></Link>
                         <Link to={''}><BsCart3 /></Link>
                     </div>
@@ -95,12 +95,11 @@ const Header = () => {
                         <img src={Drop} alt="Bike" width={300} />
                     </div> : null}
                     <div className="header--search"
-                        style={{ transform: searchInput ? "translateY(0)" : "translateY(200%)" }}
-                    >
-                        <div className="header--search__content">
-                            <input type="text" placeholder='Поиск' />
-                            <a href="#"><IoIosSearch /></a>
-                        </div>
+                        style={{ transform: searchInput ? "translateX(0)" : "translateX(300%)" }}>
+                        <input type="text" placeholder='Поиск' />
+                        <a href="#"><IoIosSearch /></a>
+                    </div>
+                    <div className="header--panel">
 
                     </div>
                 </div>
