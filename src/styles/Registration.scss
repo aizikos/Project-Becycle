@@ -1,9 +1,10 @@
-#accaunt {
+#registration {
+
     display: flex;
     justify-content: center;
-    margin: 60px 0;
+    margin: 50px 0;
 
-    .accaunt {
+    .registration {
         border: 2px solid black;
         width: 385px;
         padding: 40px 30px;
@@ -12,6 +13,7 @@
             width: 300px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 30px;
 
             h4 {
@@ -22,7 +24,8 @@
                 letter-spacing: 0.01em;
             }
 
-            a {
+
+            h5 {
                 color: #777777;
                 font-size: 18px;
                 font-weight: 500;
@@ -30,9 +33,7 @@
                 letter-spacing: 0.01em;
             }
 
-            a:active {
-                color: black;
-            }
+
         }
 
         &--form {
@@ -58,19 +59,28 @@
             }
         }
 
+
         button {
             border: none;
             border-radius: 10px;
             outline: none;
             background: #F57520;
             color: white;
-            padding: 15px 145px;
+            padding: 15px 125px;
             margin-bottom: 20px;
+            cursor: pointer;
         }
 
-        &--check {
+        &--quest {
             display: flex;
-            justify-content: space-between;
+            gap: 5px;
+
+            p {
+                color: #777777;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 22.4px;
+            }
 
             a {
                 color: black;
@@ -78,10 +88,11 @@
                 font-weight: 400;
                 line-height: 22.4px;
             }
-
-            a:hover{
-                color: #F57520;
-            }
         }
     }
+
+
+
+
+
 }

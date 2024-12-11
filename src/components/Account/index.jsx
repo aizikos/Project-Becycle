@@ -6,8 +6,8 @@ const Accaunt = () => {
       <div className="accaunt">
         <div className="container">
           <div className="accaunt--link">
-            <Link to={''}>Войти</Link>
-            <Link to={''}>Регистрация</Link>
+            <h4>Войти</h4>
+            <Link to={'/registration'}>Регистрация</Link>
           </div>
           <div className="accaunt--form">
             <label htmlFor="">Имя пользователя</label>
@@ -21,7 +21,7 @@ const Accaunt = () => {
               <input type="checkbox" />
               <label htmlFor="">Запомнить меня</label>
             </div>
-            <Link to={''}>Забыли пароль?</Link>
+            <Link to={'/reset-password'}>Забыли пароль?</Link>
           </div>
         </div>
       </div>
