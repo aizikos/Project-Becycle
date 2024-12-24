@@ -10,11 +10,13 @@ import { MdClose } from "react-icons/md";
 import Drop from '../../assets/png/bicycle/drop.png'
 import { IoMdArrowDropup } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
+import { useAuth } from '../../context/AuthContext';
 
 
 
 
 const Header = () => {
+    const {user} = useAuth()
     const [burger, setBurger] = useState(false)
     const [drop, setDrop] = useState(false)
     const [searchInput, setSearchInput] = useState(false)
@@ -43,9 +45,9 @@ const Header = () => {
                         <Link to={''} onClick={() => setSearchInput(true)}>
                             <IoSearch />
                         </Link>
-                        <Link to={'/accaunt'}><FaRegUser /></Link>
+                        <Link to={user? '/profile' : '/accaunt'}><FaRegUser /></Link>
                         <Link to={''}><FaRegHeart /></Link>
-                        <Link to={''}><BsCart3 /></Link>
+                        <Link to={'/basket'}><BsCart3 /></Link>
                     </div>
                     <div className="header--menu">
                         <Link to={''} onClick={() => setBurger(true)}>

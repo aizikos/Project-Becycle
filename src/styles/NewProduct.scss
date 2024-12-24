@@ -16,10 +16,12 @@
 
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         &--card {
             background: white;
-            width: 350px;
+            width: 350px; 
+            margin-top: 25px;
 
 
             &__country {

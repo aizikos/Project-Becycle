@@ -1,6 +1,50 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../../context/AuthContext'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Accaunt = () => {
+  const {logIn} = useAuth();
+  const navigate = useNavigate()
+
+  const ERROR = () => {
+    toast.error('🦄 Неправильно запольнено', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+}
+
+const succses = () => {
+    toast.success('🦄 Добавлено', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+}
+
+async function handleLogIn() {
+    try {
+        await logIn(email, pasword)
+        navigate('/profile')
+    } catch (error) {
+        ERROR()
+    }
+    setEmail('')
+    setPasword('')
+}
   return (
     <div id='accaunt'>
       <div className="accaunt">
@@ -15,7 +59,7 @@ const Accaunt = () => {
             <label htmlFor="">Пароль</label>
             <input type="text" />
           </div>
-          <button>Войти</button>
+          <button onClick={()=>handleLogIn()}>Войти</button>
           <div className="accaunt--check">
             <div className="accaunt--check__checkbox">
               <input type="checkbox" />
@@ -25,6 +69,7 @@ const Accaunt = () => {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   )
 }
